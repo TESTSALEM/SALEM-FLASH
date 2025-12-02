@@ -57,16 +57,14 @@ jobs:
           pip install --upgrade pip
           pip install buildozer cython
 
-      # 5. تنظيف البناء السابق (اختياري لضمان بناء نظيف)
-      - name: Clean previous build
-        run: buildozer android clean
+      # (تم حذف خطوة التنظيف Clean من هنا لأنها تسبب المشكلة)
 
-      # 6. بدء عملية البناء
-      # الأمر 'yes |' يقوم بالموافقة التلقائية على أي سؤال يطرحه النظام (مثل اتفاقية الترخيص)
+      # 5. بدء عملية البناء
+      # الأمر 'yes |' يقوم بالموافقة التلقائية على التراخيص وتحميل الملفات الناقصة
       - name: Build APK
         run: yes | buildozer android debug
 
-      # 7. رفع ملف APK الناتج
+      # 6. رفع ملف APK الناتج
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
