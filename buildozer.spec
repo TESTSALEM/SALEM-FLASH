@@ -15,12 +15,13 @@ source.dir = .
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas,ttf
 
-# (str) Application versioning (method 1)
+# (str) Application versioning
 version = 1.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.2.0,android,jnius,arabic-reshaper,python-bidi
+# تم تعديل jnius إلى pyjnius هنا
+requirements = python3,kivy==2.2.0,android,pyjnius,arabic-reshaper,python-bidi
 
 # (str) Icon of the application
 icon.filename = flashlight-app-icon-14.jpg
