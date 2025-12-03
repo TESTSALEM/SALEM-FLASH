@@ -20,7 +20,7 @@ version = 1.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-# تم تعديل jnius إلى pyjnius هنا
+# هام جداً: تأكد أن الكلمة هنا هي pyjnius وليست jnius
 requirements = python3,kivy==2.2.0,android,pyjnius,arabic-reshaper,python-bidi
 
 # (str) Icon of the application
